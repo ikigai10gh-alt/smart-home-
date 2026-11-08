@@ -1,0 +1,148 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>ESP32 Smart Home Control Center</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+
+  <body>
+    <!-- HEADER -->
+
+    <header class="main-header">
+      <h1>ESP32 SMART HOME</h1>
+
+      <p>Control • Monitor • Live Smart</p>
+
+      <div class="connection">● Wi-Fi Connection</div>
+    </header>
+
+    <!-- HERO SECTION -->
+
+    <section class="hero">
+      <h2>Welcome to <span>Smart Home</span></h2>
+
+      <p>Intelligent Home Automation Using ESP32</p>
+
+      <p>Control and monitor your home devices from one place.</p>
+    </section>
+
+    <!-- MAIN DASHBOARD -->
+
+    <div id="home">
+      <h2 style="color: #00d4ff">MY DEVICES</h2>
+
+      <div class="dashboard">
+        <!-- LIGHT -->
+
+        <div class="card" onclick="openPage('light')">
+          <img src="image/light/imageslight.webp" alt="Light" />
+
+          <h2>LIGHT CONTROL</h2>
+
+          <p>Control your home lights</p>
+        </div>
+
+        <!-- FAN -->
+
+        <div class="card" onclick="openPage('fan')">
+          <img src="image/fan.jpg" alt="Fan" />
+
+          <h2>FAN CONTROL</h2>
+
+          <p>Control your fan</p>
+        </div>
+
+        <!-- WATER -->
+
+        <div class="card" onclick="openPage('water')">
+          <img src="image/water.jpg" alt="Water Tank" />
+
+          <h2>WATER LEVEL</h2>
+
+          <p>Monitor your water tank</p>
+        </div>
+
+        <!-- TEMPERATURE -->
+
+        <div class="card" onclick="openPage('temperature')">
+          <img src="image/temperature.jpg" alt="Temperature Sensor" />
+
+          <h2>TEMPERATURE</h2>
+
+          <p>Monitor room temperature</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- LIGHT CONTROL PAGE -->
+
+    <div id="light" class="page">
+      <h2>LIGHT CONTROL</h2>
+
+      <p>Control your home lights</p>
+
+      <button class="on-btn" onclick="changeStatus('lightStatus', 'ON')">
+        LIGHT ON
+      </button>
+
+      <button class="off-btn" onclick="changeStatus('lightStatus', 'OFF')">
+        LIGHT OFF
+      </button>
+
+      <p id="lightStatus" class="status">Light Status: OFF</p>
+
+      <button class="back-btn" onclick="goHome()">BACK TO HOME</button>
+    </div>
+
+    <!-- FAN CONTROL PAGE -->
+
+    <div id="fan" class="page">
+      <h2>FAN CONTROL</h2>
+
+      <p>Control your home fan</p>
+
+      <button class="on-btn" onclick="changeStatus('fanStatus', 'ON')">
+        FAN ON
+      </button>
+
+      <button class="off-btn" onclick="changeStatus('fanStatus', 'OFF')">
+        FAN OFF
+      </button>
+
+      <p id="fanStatus" class="status">Fan Status: OFF</p>
+
+      <button class="back-btn" onclick="goHome()">BACK TO HOME</button>
+    </div>
+
+    <!-- WATER LEVEL PAGE -->
+
+    <div id="water" class="page">
+      <h2>WATER LEVEL MONITORING</h2>
+
+      <p>Monitor your water tank level.</p>
+
+      <p id="waterStatus" class="status">Waiting for ESP32 data...</p>
+
+      <button class="back-btn" onclick="goHome()">BACK TO HOME</button>
+    </div>
+
+    <!-- TEMPERATURE PAGE -->
+
+    <div id="temperature" class="page">
+      <h2>TEMPERATURE MONITORING</h2>
+
+      <p>Monitor your room temperature.</p>
+
+      <p id="temperatureStatus" class="status">Waiting for ESP32 data...</p>
+
+      <button class="back-btn" onclick="goHome()">BACK TO HOME</button>
+    </div>
+
+    <!-- JAVASCRIPT -->
+
+    <script src="script.js"></script>
+  </body>
+</html>

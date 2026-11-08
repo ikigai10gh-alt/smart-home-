@@ -1,0 +1,160 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: #0b1220;
+  color: white;
+  text-align: center;
+  margin: 0;
+  padding: 20px;
+}
+
+/* HEADER */
+.main-header {
+  padding: 20px;
+  border-bottom: 2px solid #008cff;
+  margin-bottom: 25px;
+}
+
+.main-header h1 {
+  color: #00d4ff;
+  font-size: 32px;
+}
+
+.main-header p {
+  color: #94a3b8;
+  font-size: 16px;
+}
+
+.connection {
+  color: #c56b22;
+  font-size: 14px;
+}
+
+/* HERO SECTION */
+.hero {
+  background: linear-gradient(135deg, #0f2748, #123e70, #071426);
+  padding: 45px 20px;
+  border-radius: 18px;
+  margin: 25px auto;
+  max-width: 1000px;
+}
+
+.hero h2 {
+  font-size: 32px;
+  color: white;
+}
+
+.hero span {
+  color: #00d4ff;
+}
+
+.hero p {
+  color: #cbd5e1;
+  font-size: 17px;
+}
+
+/* DASHBOARD */
+.dashboard {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 22px;
+  max-width: 1000px;
+  margin: 30px auto;
+}
+
+.card {
+  background: #172438;
+  border: 1px solid #164e83;
+  padding: 18px;
+  border-radius: 15px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  border-color: #00d4ff;
+  background: #203550;
+}
+
+.card img {
+  width: 100%;
+  height: 170px;
+  object-fit:cover;
+  border-radius: 10px;
+}
+
+.card h2 {
+  color: #38bdf8;
+}
+
+.card p {
+  color: #cbd5e1;
+}
+
+/* CONTROL PAGES */
+.page {
+  display: none;
+  background: #172438;
+  border: 1px solid #164e83;
+  padding: 30px;
+  border-radius: 18px;
+  max-width: 500px;
+  margin: 40px auto;
+}
+
+.page h2 {
+  color: #38bdf8;
+}
+
+/* BUTTONS */
+button {
+  padding: 13px 28px;
+  border: none;
+  border-radius: 8px;
+  margin: 10px;
+  font-size: 15px;
+  font-weight: bold;
+  cursor: pointer;
+  color: white;
+}
+
+.on-btn {
+  background: #00c853;
+}
+
+.off-btn {
+  background: #ff1744;
+}
+
+.back-btn {
+  background: #475569;
+}
+
+button:hover {
+  opacity: 0.8;
+}
+
+.status {
+  color: #00d4ff;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+/* MOBILE RESPONSIVE */
+@media (max-width: 600px) {
+  .dashboard {
+    grid-template-columns: 1fr;
+  }
+
+  .hero h2 {
+    font-size: 25px;
+  }
+
+  .main-header h1 {
+    font-size: 24px;
+  }
+}
